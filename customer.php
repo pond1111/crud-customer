@@ -24,7 +24,9 @@
 	}
 	echo "<a href=customeradd.html>insert customer</a>";
 	mysqli_close($link);
+
 ?>
 </table>
+<a href="order_bill.php">หน้าสั่งซื้อสินค้า</a>
 </body>
 </html>
