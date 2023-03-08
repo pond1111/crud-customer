@@ -17,6 +17,7 @@
     $product_id =$_GET['product_id'];
     $amount = $_GET['amount'];
     $bill_code = $_GET['bill_code'];
+    $salesman_id = $_GET['salesman_id'];
 
     // insert input
     $sql0 = "INSERT INTO `billproduct` (`ListOrder`, `ListOrderNumber`, `productID`, `AmountOrder`) VALUES (NULL, '$bill_code', '$product_id', '$amount')";
@@ -37,6 +38,7 @@
                     <p class="card-text"><center><?php echo $date;?></center></p>
                     <p class="card-text"><center>Name : <?php echo $user['CustomerName'];?></center></p>
                     <p class="card-text"><center>product : <?php echo $pd['ProducName'];?></center></p>
+                     <p class="card-text"><center>salesman : <?php echo $pd['salesmanName'];?></center></p> 
                 </div>
             </div>
         </div>

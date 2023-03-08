@@ -11,7 +11,7 @@
             <label for="customer_bill">CustomerName:</label>
             <select name="customer_id">
          <?php 
-                $link = mysqli_connect("localhost","root","","mycompany");
+            $link = mysqli_connect("localhost","root","","mycompany");
             $customer = "SELECT * FROM customer";
             $qry = mysqli_query($link, $customer);
             foreach ($qry as $customer){ ?>
@@ -26,6 +26,16 @@
             $qry = mysqli_query($link, $product);
             foreach ($qry as $product){ ?>
             <option value="<?php echo $product['ProducID'];?>"> สินค้า <?php echo $product['ProducName'];?></option>
+            <?php } ?>
+            ?>
+        </select>
+        <label for="customer_bill">Salesman:</label>
+        <select name="salesman_id">
+            <?php 
+            $csid = "SELECT * FROM salesman";
+            $qry = mysqli_query($link, $csid);
+            foreach ($qry as $csid){ ?>
+            <option value="<?php echo $csid['salesmanID'];?>"> พนักงานขาย <?php echo $csid['salesmanName'];?></option>
             <?php } ?>
             ?>
         </select>
